@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap');
+
+html.scifi, body.scifi {
+    font-family: "Nunito", "Ubuntu", sans-serif;
+    background-color: #0a0f1c;
+    color: #e0e0ff;
+  }
+
+  /* Fonts */
+  html.scifi, body.scifi {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--fg);
+  }
+  
+  .scifi h1, .scifi h2, .scifi h3, .scifi h4 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #a882ff;
+    text-shadow: 0 0 6px #a882ff66;
+  }
+  
+  .scifi pre, .scifi code {
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  /* Sidebar */
+  .scifi .sidebar {
+    background: linear-gradient(180deg, #140a28, #1b0e3f);
+    color: #c8c9db;
+    border-right: 1px solid #362f59;
+  }
+  
+  .scifi .sidebar a {
+    color: #a882ff;
+  }
+  
+  .scifi .sidebar a:hover {
+    color: #53dfdd;
+  }
+  
+  /* Chapter content */
+  .scifi .chapter {
+    color: #e2e6f0;
+  }
+  
+  /* Headings */
+  .scifi h1, .scifi h2, .scifi h3, .scifi h4 {
+    color: #a882ff;
+    text-shadow: 0 0 5px rgba(168, 130, 255, 0.3);
+  }
+  
+  /* Inline code */
+  .scifi code {
+    background-color: rgba(168, 130, 255, 0.15);
+    color: #91f3ff;
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+  }
+  
+  /* Code blocks */
+  .scifi pre {
+    background: rgba(10, 20, 40, 0.85);
+    color: #c3f8ff;
+    border-radius: 10px;
+    padding: 1em;
+    border: 1px solid #2f2a49;
+    box-shadow: 0 0 15px rgba(83, 223, 221, 0.2);
+  }
+  
+  .scifi pre code {
+    background: transparent;
+  }
+  
+  /* Copy button on code blocks */
+  .scifi .copy-button {
+    filter: invert(51%) sepia(10%) saturate(393%) hue-rotate(198deg)
+      brightness(86%) contrast(87%);
+  }
+  
+  .scifi .copy-button:hover {
+    filter: invert(46%) sepia(20%) saturate(1537%) hue-rotate(156deg)
+      brightness(85%) contrast(90%);
+  }
+  
+  /* mdbook-admonish callouts */
+  .scifi {
+    --mdbook-callouts-background: rgba(25, 19, 49, 0.95);
+    --mdbook-callouts-border: #53dfdd;
+    --mdbook-callouts-color: #c8eafc;
+    --mdbook-callouts-icon-color: #91f3ff;
+  
+    --mdbook-callout-note: #291d38;
+    --mdbook-callout-info: #1b2a40;
+    --mdbook-callout-warning: #4f3b14;
+    --mdbook-callout-error: #4c1c1c;
+  }
+  
+  /* Blockquotes */
+  .scifi blockquote {
+    background-color: rgba(83, 223, 221, 0.05);
+    border-left: 4px solid #53dfdd;
+    padding: 1em;
+    font-style: italic;
+  }
+  
+  /* Links */
+  .scifi a {
+    color: #53dfdd;
+    text-decoration: none;
+    text-shadow: 0 0 6px #53dfdd55;
+  }
+  
+  .scifi a:hover {
+    color: #a882ff;
+    text-shadow: 0 0 8px #a882ff66;
+  }
+  
+  /* Scrollbar */
+  .scifi ::-webkit-scrollbar {
+    width: 8px;
+  }
+  .scifi ::-webkit-scrollbar-thumb {
+    background: #444866;
+    border-radius: 4px;
+  }
+  .scifi ::-webkit-scrollbar-thumb:hover {
+    background: #a882ff;
+  }
+  
+  /* Table Styling */
+  .scifi table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #1b1e2e;
+  }
+  .scifi th, .scifi td {
+    border: 1px solid #3c3c5a;
+    padding: 8px;
+  }
+  .scifi th {
+    background-color: #29294b;
+    color: #a882ff;
+  }
+  
+  /* Footnotes */
+  .scifi .footnote {
+    background-color: #1b1e2e;
+    border-left: 3px solid #a882ff;
+    padding: 0.5em;
+    margin-top: 1em;
+  }
+  
+
+  .scifi h1, .scifi h2 {
+    text-shadow: 0 0 8px #a882ff66;
+  }
+  
+  html.scifi, body.scifi {
+    background-image: url("../winter.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #503d37;
+    background-blend-mode: multiply;
+    color: var(--fg); /* optional fallback */
+  }
+  

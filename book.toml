@@ -1,0 +1,18 @@
+[book]
+title = "2025 CompClub Winter Workshops Handbook"
+author = "2025 CompClub Internals Team"
+language = "en"
+
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "scifi"
+additional-css = ["theme/custom.css"]
+
+[preprocessor.callouts]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.1.0" # do not edit: managed by `mdbook-admonish install`
