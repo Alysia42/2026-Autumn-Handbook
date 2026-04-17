@@ -87,29 +87,28 @@ rect(0, 0, 200, 200);
 
 ### Step 3 — Build the Composition
 
-Add more rectangles to fill the canvas. Think of the canvas as a grid divided by thick black lines. Here's an example layout to get you started — feel free to change any values:
-
+Add more rectangles to fill the canvas. Think of the canvas as a grid divided by thick black lines. Below is an example:
 ```js
-// Red block — top left
+// Red block
 fill(214, 0, 0);
 rect(0, 0, 200, 180);
 
-// Blue block — bottom right
+// Blue block
 fill(0, 68, 170);
 rect(280, 300, 220, 200);
 
-// Yellow block — middle
+// Yellow block
 fill(255, 214, 0);
 rect(200, 0, 300, 120);
 
-// White fill blocks — the rest
+// White fill blocks
 fill(240, 240, 240);
 rect(0, 180, 200, 320);
 rect(200, 120, 300, 180);
 rect(200, 300, 80, 200);
 ```
 
-> 💡 Don't worry about getting it perfect straight away. Adjust the numbers until it looks balanced!
+> 💡 Don't worry about getting it perfect straight away. Play around with the numbers until it looks balanced!
 
 ---
 
@@ -158,14 +157,6 @@ fill(c[0], c[1], c[2]);
 ```
 
 Click **Run** a few times. Does it produce interesting compositions every time?
-
----
-
-## Key Takeaways
-
-- Set `fill()` and `stroke()` **before** drawing a shape, they apply to everything drawn after them.
-- `strokeWeight()` controls how thick the outlines are. Mondrian's thick black lines are a big part of the style.
-- Coordinates and sizing are everything in grid based composition and small adjustments can make a big visual difference.
 
 ---
 
