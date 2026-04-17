@@ -24,7 +24,7 @@ function draw() {
 }
 ```
 
-The canvas is a grid of pixels. The **top-left corner is (0, 0)**. X increases to the right, Y increases downward.
+The canvas is a grid of pixels. The **top left corner is (0, 0)**. X increases to the right, Y increases downward.
 
 ```
 (0,0) ──────────────▶ x
@@ -41,7 +41,7 @@ The canvas is a grid of pixels. The **top-left corner is (0, 0)**. X increases t
 
 | Function | What it draws |
 |---|---|
-| `rect(x, y, width, height)` | Rectangle — x/y is the top-left corner |
+| `rect(x, y, width, height)` | Rectangle — x/y is the top left corner |
 | `ellipse(x, y, width, height)` | Ellipse — x/y is the centre |
 | `line(x1, y1, x2, y2)` | A straight line between two points |
 | `triangle(x1,y1, x2,y2, x3,y3)` | Triangle with three corner points |
@@ -117,11 +117,11 @@ ellipse(200, 200, 180, 200);
 // Left eye
 circle(160, 170, 30);
 
-// Right eye — add this yourself!
+// Right eye (add this yourself!)
 
-// Nose — add this yourself!
+// Nose (add this yourself!)
 
-// Mouth — add this yourself!
+// Mouth (add this yourself!)
 ```
 
 ---
@@ -136,15 +136,6 @@ Draw a simple outdoor scene using only shapes. It could include:
 - A tree (rectangle trunk + circle top)
 
 Try to use **at least 8 shapes** in total.
-
----
-
-## Key Takeaways
-
-- `setup()` runs once; `draw()` loops continuously.
-- The canvas origin `(0, 0)` is the **top-left**.
-- All shapes are positioned using x and y coordinates.
-- Shapes drawn later appear **on top** of shapes drawn earlier.
 
 ---
 
