@@ -1,4 +1,4 @@
-# Lab 01 — Shapes & the Canvas
+# Shapes & the Canvas
 
 ## What You'll Learn
 
