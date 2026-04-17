@@ -164,4 +164,4 @@ Click **Run** a few times. Does it produce interesting compositions every time?
 
 - [p5.js reference — `rect()`](https://p5js.org/reference/p5/rect/)
 - [p5.js reference — Color](https://p5js.org/reference/#group-Color)
-- [Mondrian Painting Examples]([https://en.wikipedia.org/wiki/Piet_Mondrian](https://galeriemontblanc.com/en/blogs/articles/what-are-the-8-most-beautiful-abstract-paintings-by-piet-mondrian)
+- [Mondrian-style Painting Examples](https://galeriemontblanc.com/en/blogs/articles/what-are-the-8-most-beautiful-abstract-paintings-by-piet-mondrian)
