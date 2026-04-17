@@ -1,4 +1,4 @@
-# Lab — Bouncing Ball Activity
+# Lab — Bouncing Ball Simulation
 
 ## What You'll Make
 
@@ -21,12 +21,12 @@ By the end of this lab you will be able to:
 
 ### Simulating Gravity with Velocity
 
-Real gravity accelerates objects downward. It doesn't just move them, it also speeds them up over time. We can simulate this with two variables:
+Real gravity accelerates objects downward, meaning they speed up over time. We can simulate this with two variables:
 
 | Variable | What it represents |
 |---|---|
 | `y` | The ball's vertical position on the canvas |
-| `vy` | The ball's vertical **velocity** — how fast it's moving up or down |
+| `vy` | The ball's vertical **velocity** (how fast it's moving up or down) |
 
 Each frame, we:
 1. Increase `vy` by a small `gravity` value (speeding up the fall)
@@ -175,17 +175,7 @@ background(220, 40);  // low alpha = old frames fade slowly
 
 ---
 
-## Key Takeaways
-
-- Velocity (`vy`) changes position each frame; gravity changes velocity each frame — this creates realistic acceleration.
-- Multiplying velocity by a negative number less than 1 (like `-0.8`) reverses and weakens it — simulating an energy-losing bounce.
-- Boolean variables like `dragging` are great for toggling between two modes of behaviour.
-- `mousePressed()`, `mouseDragged()`, and `mouseReleased()` let you respond to different stages of a mouse interaction.
-
----
-
 ## Reference
 
 - [p5.js reference — `mousePressed()`](https://p5js.org/reference/p5/mousePressed/)
 - [p5.js reference — `dist()`](https://p5js.org/reference/p5/dist/)
-- [p5.js web editor](https://editor.p5js.org)
