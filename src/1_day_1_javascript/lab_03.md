@@ -83,9 +83,9 @@ let y = 200;
 let vy = 0;
 
 let gravity = 0.5;
-let bounce = -0.8;
+let bounce = -0.8678;
 
-let size = 50;
+let size = 123;
 
 let dragging = false;
 
@@ -96,7 +96,11 @@ function setup() {
 function draw() {
   background(220);
 
-  // PUT YOUR CODE HERE
+  if (!dragging) {
+    // PUT YOUR GRAVITY CODE HERE
+
+    // PUT YOUR BOUNCING CODE HERE
+  }
 
   circle(x, y, size);
 }
@@ -135,10 +139,10 @@ Still inside `draw()`, add code to make the ball bounce:
 
 Add code to the mouse functions to handle dragging:
 
-- [ ] In `mousePressed()` — if the mouse is on the ball, set `dragging` to `true`
-- [ ] In `mouseDragged()` — if `dragging` is `true`, update `x` and `y` to follow the mouse
-- [ ] In `mouseReleased()` — set `dragging` to `false`
-- [ ] In `draw()` — only apply gravity when `dragging` is `false`
+- [ ] In `mousePressed()` if the mouse is on the ball, set `dragging` to `true`
+- [ ] In `mouseDragged()` if `dragging` is `true`, update `x` and `y` to follow the mouse
+- [ ] In `mouseReleased()` set `dragging` to `false`
+- [ ] In `draw()` only apply gravity when `dragging` is `false`
 
 ---
 
@@ -146,7 +150,7 @@ Add code to the mouse functions to handle dragging:
 
 > 💡 Use `dist(mouseX, mouseY, x, y)` to check if the mouse is on the ball.
 
-> 💡 The `dragging` boolean tracks whether the ball is being dragged — check it before applying gravity.
+> 💡 The `dragging` boolean tracks whether the ball is being dragged, so check it before applying gravity.
 
 > 💡 When the ball hits the floor, make sure you also reset `y` to the edge of the canvas, otherwise the ball can get stuck below it.
 
@@ -156,7 +160,7 @@ Add code to the mouse functions to handle dragging:
 
 Once the ball is working, try these additions:
 
-- [ ] Style the ball — add a colour, gradient effect, or face using shapes
+- [ ] Style the ball by adding a colour, gradient effect, or face using shapes
 - [ ] Add a horizontal velocity `vx` so the ball also drifts sideways when released after dragging
 - [ ] Add left and right wall bouncing using the same logic as the floor bounce
 - [ ] Add friction — reduce `vx` slightly each frame so the ball slows down over time
@@ -170,7 +174,8 @@ Add a **trail effect** behind the ball as it moves. The trail should fade out be
 **Hint:** Try removing `background(220)` from `draw()` and instead using a semi-transparent background to create a fading trail:
 
 ```js
-background(220, 40);  // low alpha = old frames fade slowly
+// low alpha = old frames fade slowly
+background(220, 40);
 ```
 
 ---
