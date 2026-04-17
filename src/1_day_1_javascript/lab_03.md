@@ -1,11 +1,5 @@
 # Lab — Bouncing Ball Activity
 
-**Difficulty:** Beginner  
-**Time:** ~30 minutes  
-**Topics:** `draw()`, `mousePressed()`, `mouseDragged()`, `mouseReleased()`, velocity, gravity
-
----
-
 ## What You'll Make
 
 In this exercise, you'll create a sketch of a ball that is affected by gravity, which the user can drag with the mouse. By the end, you will have an interactive physics simulation built entirely in p5.js!
@@ -27,7 +21,7 @@ By the end of this lab you will be able to:
 
 ### Simulating Gravity with Velocity
 
-Real gravity accelerates objects downward — it doesn't just move them, it speeds them up over time. We can simulate this with two variables:
+Real gravity accelerates objects downward. It doesn't just move them, it also speeds them up over time. We can simulate this with two variables:
 
 | Variable | What it represents |
 |---|---|
@@ -39,8 +33,10 @@ Each frame, we:
 2. Add `vy` to `y` (moving the ball by its current speed)
 
 ```js
-vy += gravity;  // accelerate downward
-y += vy;        // move the ball
+// accelerate downward
+vy += gravity;
+// move the ball
+y += vy;
 ```
 
 ### Bouncing
@@ -49,8 +45,10 @@ When the ball hits the bottom of the canvas, we reverse its velocity and reduce 
 
 ```js
 if (y > height - size / 2) {
-  y = height - size / 2;  // stop it going through the floor
-  vy *= bounce;            // bounce is -0.8, so this flips and weakens vy
+  // stop it going through the floor
+  y = height - size / 2;
+  // bounce is -0.8, so this flips and weakens vy
+  vy *= bounce;
 }
 ```
 
