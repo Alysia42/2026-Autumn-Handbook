@@ -1,11 +1,5 @@
 # Lab — Polka Dottys 🎨
 
-**Difficulty:** Beginner  
-**Time:** ~35 minutes  
-**Topics:** `mousePressed()`, `keyPressed()`, `noLoop()`, `random()`, `color()`, event-driven mode
-
----
-
 ## What You'll Make
 
 Create some simple point-and-click art by spawning a polka dot wherever you click! You'll build up an interactive canvas where every click leaves a colourful dot — and by the end, you'll have the foundations of a digital pointillism painting tool.
