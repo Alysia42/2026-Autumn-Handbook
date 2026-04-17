@@ -2,7 +2,7 @@
 
 ## What You'll Make
 
-Create some simple point-and-click art by spawning a polka dot wherever you click! You'll build up an interactive canvas where every click leaves a colourful dot — and by the end, you'll have the foundations of a digital pointillism painting tool.
+Create some simple point and click art by spawning a polka dot wherever you click! You'll build up an interactive canvas where every click leaves a colourful dot, and by the end, you'll have the foundations of a digital painting tool.
 
 ---
 
@@ -20,11 +20,11 @@ By the end of this lab you will be able to:
 
 ## Background
 
-### Two Modes: Video vs. Event-Driven
+### Two Modes: Video vs. Event Driven
 
-So far we've used p5.js in **video mode** — `draw()` runs 60 times per second like frames in a film, and we animate by changing things each frame.
+So far we've used p5.js in **video mode**. `draw()` runs 60 times per second like frames in a video game, and we animate by changing things each frame.
 
-In this lab we're switching to a different approach: **event-driven mode**. Instead of continuously redrawing, the sketch only changes when something happens — a mouse click, a key press, an event.
+In this lab we're switching to a different approach: **even driven mode**. Instead of continuously redrawing, the sketch only changes when something happens, such as a mouse click, a key press or an event.
 
 To stop the draw loop, call `noLoop()` inside `setup()`:
 
@@ -32,7 +32,7 @@ To stop the draw loop, call `noLoop()` inside `setup()`:
 function setup() {
   createCanvas(500, 500);
   background(255);
-  noLoop();  // draw() will not loop — we're in event-driven mode
+  noLoop();
 }
 ```
 
@@ -62,7 +62,7 @@ function setup() {
 
 ### Step 1 — Set Up Event-Driven Mode
 
-Start with this skeleton. Notice there is no `draw()` function — we won't need it:
+Start with this skeleton. Notice there is no `draw()` function (we won't be using it):
 
 ```js
 function setup() {
@@ -88,7 +88,7 @@ circle(mouseX, mouseY, 40);
 
 Click around the canvas. A dot should appear wherever you click!
 
-> 💡 Because we used `noLoop()`, the background is only drawn once in `setup()`. Old dots aren't erased — they stay on the canvas permanently. That's exactly what we want!
+> 💡 Because we used `noLoop()`, the background is only drawn once in `setup()`. Old dots aren't erased and stay on the canvas permanently.
 
 ---
 
@@ -102,7 +102,7 @@ let maxSize = 80;
 circle(mouseX, mouseY, random(minSize, maxSize));
 ```
 
-Click around — each dot should now be a different size!
+Try clicking around: each dot should now be a different size!
 
 ---
 
@@ -113,7 +113,7 @@ Write a helper function that picks and applies a random colour, then call it bef
 ```js
 function mousePressed() {
   randomColour();
-  noStroke();  // remove the outline if you don't like it
+  noStroke();
   circle(mouseX, mouseY, random(20, 80));
 }
 
@@ -122,14 +122,12 @@ function randomColour() {
 }
 ```
 
-- [ ] Click lots of dots — do you like fully random colours, or is it a bit chaotic?
+- [ ] Click lots of dots
 - [ ] Try limiting the random range (e.g. `random(100, 255)`) to get pastel tones.
 
 ---
 
-## Part 2 — Pointillism Extension
-
-You realise these colourful polka dots remind you of **pointillism** — an art style where dots of different colours are placed close together to form a painting. Let's expand your tool to make something more intentional!
+## Part 2 — Extension
 
 ### Step 1 — Change Base Colour with Number Keys
 
@@ -141,7 +139,7 @@ let baseColour;
 function setup() {
   createCanvas(500, 500);
   background(255);
-  baseColour = color(0, 0, 0);  // start with black
+  baseColour = color(0, 0, 0);
   noLoop();
 }
 ```
@@ -149,26 +147,26 @@ function setup() {
 ```js
 function keyPressed() {
   if (key === '1') {
-    baseColour = color(255, 0, 0);      // red
+    baseColour = color(255, 0, 0);
   } else if (key === '2') {
-    baseColour = color(0, 68, 170);     // blue
+    baseColour = color(0, 68, 170);
   } else if (key === '3') {
-    baseColour = color(255, 214, 0);    // yellow
+    baseColour = color(255, 214, 0);
   } else if (key === '4') {
-    baseColour = color(34, 139, 34);    // green
+    baseColour = color(34, 139, 34);
   } else {
     print('Controls: 1 = red, 2 = blue, 3 = yellow, 4 = green');
   }
 }
 ```
 
-> 💡 If the user presses a key that isn't listed, `print()` sends a helpful message to the console — a handy way to guide the user!
+> 💡 If the user presses a key that isn't listed, `print()` sends a message to the console.
 
 ---
 
 ### Step 2 — Show the Currently Selected Colour
 
-Draw a small reference dot in a corner of the canvas so the user can always see which colour is active. Update it every time the colour changes:
+Draw a small reference dot in a corner of the canvas so the user can always see which colour is active. We will update it every time the colour changes:
 
 ```js
 function showSelectedColour() {
@@ -193,17 +191,19 @@ Instead of fully random colours, add a small random offset to the channels of `b
 
 ```js
 function mousePressed() {
-  let variance = 40;  // how much each channel can vary
+  // how much each channel can vary
+  let variance = 40;
 
-  let r = red(baseColour)   + random(-variance, variance);
+  let r = red(baseColour) + random(-variance, variance);
   let g = green(baseColour) + random(-variance, variance);
-  let b = blue(baseColour)  + random(-variance, variance);
+  let b = blue(baseColour) + random(-variance, variance);
 
   noStroke();
   fill(r, g, b);
   circle(mouseX, mouseY, random(20, 80));
 
-  showSelectedColour();  // redraw reference dot on top
+  // redraw reference dot on top
+  showSelectedColour();
 }
 ```
 
@@ -213,22 +213,12 @@ Try painting a scene using different colours in different areas — a blue sky, 
 
 ## Challenge Activity
 
-Go further with your pointillism tool:
+Go further with your tool:
 
-- [ ] Add more colour keys (5, 6, 7...) for a richer palette
-- [ ] Add a key (e.g. `c`) that clears the canvas back to white — use `background(255)` and redraw the reference dot
+- [ ] Add more colour keys (5, 6, 7, etc) for a richer palette
+- [ ] Add a key (e.g. `c`) that clears the canvas back to white (use `background(255)` and redraw the reference dot)
 - [ ] Make dots near the edges of the canvas smaller, and dots near the centre larger
 - [ ] Add a key that toggles between round dots and square dots (`rect()` vs `circle()`)
-
----
-
-## Key Takeaways
-
-- `noLoop()` stops the `draw()` loop — useful when you only want changes on user input.
-- `mousePressed()` and `keyPressed()` are event functions that run exactly once per interaction.
-- Storing colours in a variable with `color()` lets you reuse and modify them later.
-- `red()`, `green()`, and `blue()` extract individual channels from a colour — perfect for adding variance while staying on-theme.
-- `print()` is a handy debugging and feedback tool — messages appear in the console.
 
 ---
 
@@ -238,5 +228,4 @@ Go further with your pointillism tool:
 - [p5.js reference — `mousePressed()`](https://p5js.org/reference/p5/mousePressed/)
 - [p5.js reference — `keyPressed()`](https://p5js.org/reference/p5/keyPressed/)
 - [p5.js reference — `color()`](https://p5js.org/reference/p5/color/)
-- [Pointillism on Wikipedia](https://en.wikipedia.org/wiki/Pointillism)
 - [p5.js web editor](https://editor.p5js.org)
